@@ -57,7 +57,7 @@ No build tools or dependencies required. Just open the project in a browser:
 
 ```bash
 # Clone the repository
-git clone https://github.com/nishyanand/SCT_WD_3.git
+git clone https://github.com/krutikakolkur/SCT_WD_3.git
 
 # Navigate into the project folder
 cd SCT_WD_3
@@ -78,15 +78,8 @@ Or simply double-click `index.html` to launch it locally.
 4. After all 15 questions, view your score and performance rating
 5. Click **REVIEW ANSWERS** to see a breakdown, or **PLAY AGAIN** to restart
 
----
 
-## Author
 
-**Nishyanand**
-GitHub: [@nishyanand](https://github.com/nishyanand)
 
----
-
-## License
 
 This project is open source and available under the [MIT License](LICENSE).
