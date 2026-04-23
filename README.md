@@ -99,7 +99,7 @@ Or simply double-click `index.html` to launch it locally.
 
 This project was built as **Task 02** of the **SkillCraft Technology Web Development Internship (SCT_WD)**. The task objective was to create a stopwatch web application with start, pause, and reset functionality, along with the ability to record and display lap times.
 
----
+
 
 
 
