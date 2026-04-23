@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch — Task 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg">
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="badge">TASK 02</div>
+    <h1 class="title">STOPWATCH</h1>
+    <p class="subtitle">Precision Time Tracking</p>
+  </header>
+
+  <!-- Main App -->
+  <main class="app">
+
+    <!-- Clock Ring -->
+    <div class="clock-wrapper">
+      <svg class="ring-svg" viewBox="0 0 300 300">
+        <circle class="ring-bg" cx="150" cy="150" r="135"/>
+        <circle class="ring-progress" id="ringProgress" cx="150" cy="150" r="135"
+          stroke-dasharray="848.23" stroke-dashoffset="848.23"/>
+        <circle class="ring-tick" cx="150" cy="150" r="120"/>
+        <!-- Tick marks -->
+        <g id="tickMarks"></g>
+      </svg>
+
+      <div class="clock-face">
+        <div class="time-display" id="timeDisplay">
+          <span class="time-hh" id="timeHH">00</span>
+          <span class="time-sep">:</span>
+          <span class="time-mm" id="timeMM">00</span>
+          <span class="time-sep">:</span>
+          <span class="time-ss" id="timeSS">00</span>
+          <span class="time-ms" id="timeMS">.000</span>
+        </div>
+        <div class="status-label" id="statusLabel">READY</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-lap" id="btnLap" disabled>
+        <span class="btn-icon">◎</span>
+        <span class="btn-label">LAP</span>
+      </button>
+
+      <button class="btn btn-start" id="btnStart">
+        <span class="btn-icon" id="startIcon">▶</span>
+        <span class="btn-label" id="startLabel">START</span>
+      </button>
+
+      <button class="btn btn-reset" id="btnReset" disabled>
+        <span class="btn-icon">↺</span>
+        <span class="btn-label">RESET</span>
+      </button>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="statsBar" style="display:none;">
+      <div class="stat">
+        <span class="stat-val" id="statLaps">0</span>
+        <span class="stat-key">LAPS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-val" id="statBest">—</span>
+        <span class="stat-key">BEST LAP</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-val" id="statAvg">—</span>
+        <span class="stat-key">AVG LAP</span>
+      </div>
+    </div>
+
+    <!-- Lap List -->
+    <div class="lap-container" id="lapContainer">
+      <div class="lap-header" id="lapHeader" style="display:none;">
+        <span>LAP</span>
+        <span>SPLIT</span>
+        <span>TOTAL</span>
+      </div>
+      <ul class="lap-list" id="lapList"></ul>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
